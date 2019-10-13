@@ -10,10 +10,13 @@ import sys
 def sockMerchant(n, ar):
     ar.sort()
     sock=0
-    for i in range (0,n-1):
+    #print(ar)
+    for i in range (0,n-1,2):
         if (ar[i]==ar[i+1]):
             sock=sock+1
-    print(sock)
+        else:
+            i=i-1
+    return (sock)
    # print(sock)
 
 if __name__ == '__main__':
