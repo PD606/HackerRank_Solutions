@@ -46,33 +46,19 @@ def print_singly_linked_list(node, sep, fptr):
 #     SinglyLinkedListNode next
 #
 #
-def insertNodeAtPosition(head, data1, position):
-    #print(position
-    count=0
+def insertNodeAtPosition(head, data, position):
+    temp2=SinglyLinkedListNode(data)
     temp=head
-    temp.data=head.data
-    temp.next=head.next
-    while(count != position):
-        #print(head.data)
+    
+    count=0
+    while(count!=position-1):
         temp=temp.next
         count=count+1
-    temp1=temp
-    p=temp
-    temp.data=data1
-    temp.next=temp1
-    temp1=p
-    #print(temp1.data)
-
-    return head
-        
+    temp2.next=temp.next
+    temp.next=temp2
     
-    #head.data=data
-    #head.next=temp
-    #temp.next='\0'
-    #print(temp.data)    
-        #print(head.next.data)
-
-
+  
+    return head
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
