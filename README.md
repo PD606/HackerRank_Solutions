@@ -1,4 +1,4 @@
-# HackerRank Solutions
+# HackerRank Solutions :notebook_with_decorative_cover:
 
 ## Solutions to some of the problem statements given by HackerRank
 
