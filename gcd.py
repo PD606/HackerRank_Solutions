@@ -1,35 +1,38 @@
-def gcd(a,b):
-	if(b==0):
-		return a
-	else:
-		return gcd(b,a%b)
+#code
+T=int(input())
+p=0
+
+while(p<T):
+    p+=1
+    n1=int(input())
+    n2=int(input())
+    a=[1,n1]
+    b=[1,n2]
+
+    c=1
+    
+    j=2
+    k=2
+
+    while(j<=n1//0.5 ):
+        if(n1%j==0):
+            a.append(j)
+        j+=1
+
+    while(k<=n2//0.5):
+        if(n2%k==0):
+            b.append(k)
+        k+=1
+
+    a=set(a)
+    b=set(b)
+    print(a)
+    print(b)
+
+    ele=a.intersection(b)
+    print(max(ele))
 
 
-def isco(arr,n):
-	c=0
-	for i in range(0,n):
-		for j in range(1,n-1):
-			v=gcd(arr[i],arr[j])
-			if(v==1):
-				c+=1
-			else:
-				pass
-	return c
 
-# a=gcd(11,20)
-# print(a)
 
-n=int(input('size'))
-i=0
-arr=[]
-while(i<n):
-	i+=1
-	a=int(input())
-	arr.append(a)
-
-print(arr)
-
-res=isco(arr,n)
-
-print('coprimes',res)
-
+    
