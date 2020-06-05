@@ -11,3 +11,8 @@
 
 [HackerRank Problem Statements](https://www.hackerrank.com/domains/python)
 
+*To view the solutions click below* :point_down:
+
+[HackerRank Solutions](https://github.com/praveenhonavar/HackerRank-Solutions)
+
+
