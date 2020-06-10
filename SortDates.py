@@ -20,7 +20,8 @@ d={
 # print(d['Dec'])
 
 for i in range(0,len(n)):
-    for j in range(1,len(n)):
+
+    for j in range(1,len(n)-i):
         y=n[j-1]
 
         y=y[7:]
@@ -38,30 +39,30 @@ for i in range(0,len(n)):
             # print(d[m])
             # print(d[m1])
 
-            for j in range(1,len(n)):
+            # for j in range(1,len(n)-i):.
 
-                if((d[m]) == (d[m1])):
+            if((d[m]) == (d[m1])):
 
-                    dd=n[j-1]
-                    dd=dd[0:2]
+                dd=n[j-1]
+                dd=dd[0:2]
 
-                    dd1=n[j]
-                    dd1=dd1[0:2]
+                dd1=n[j]
+                dd1=dd1[0:2]
 
-                    print('daaay',dd)
-                    print('dadadoa',dd1)
+                # print('daaay',dd)
+                # print('dadadoa',dd1)
 
-                    for j in range(1,len(n)):
-                        if(int(dd)>int(dd1)):
-                            n[j],n[j-1]=n[j-1],n[j]
-                        else:
-                            continue
-
-                elif(d[m] < d[m1]):
+                # for j in range(1,len(n)-i):
+                if(int(dd)<int(dd1)):
                     continue
-
                 else:
-                    n[j-1],n[j]=n[j],n[j-1]
+                    n[j],n[j-1]=n[j-1],n[j]
+
+            elif(d[m] < d[m1]):
+                continue
+
+            else:
+                n[j-1],n[j]=n[j],n[j-1]
 
             
         elif(int(y)<int(y1)):
