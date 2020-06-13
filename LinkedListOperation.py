@@ -45,6 +45,21 @@ class LinkedList:
         temp.next=Node(data,temp.next)
 
 
+    def reverse(self):
+        prev=None
+        curnt=self.head
+        # print('gigjir')
+        while(curnt != None):
+            # print('llel')
+            fwd=curnt.next
+            curnt.next=prev
+            prev=curnt
+            curnt=fwd
+        self.head=prev
+
+        
+
+
     def print(self):
         temp=self.head
         while(temp.next != None):
@@ -75,4 +90,7 @@ l.insertAt(99,1)
 l.insertAt(606,2)
 l.insertAt(5,1)
 
+l.print()
+print('____________________________--')
+l.reverse()
 l.print()
