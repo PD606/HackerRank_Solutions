@@ -67,6 +67,19 @@ class LinkedList:
             temp=temp.next
         print(temp.data)
 
+    def printMid(self):
+
+        f=self.head 
+        s=self.head
+
+        while(f.next != None):
+            f=f.next.next
+            s=s.next
+        s.next=s.next.next
+
+        # print(s.next.data) 
+
+
 
 l=LinkedList()
 
@@ -92,5 +105,11 @@ l.insertAt(5,1)
 
 l.print()
 print('____________________________--')
-l.reverse()
+# l.reverse()
+
+l.printMid()
+
+print('____________________________--')
+
+
 l.print()
